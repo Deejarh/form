@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after div.container {
+  position: relative;
+}
+
+body {
+  background: linear-gradient(
+    60deg,
+    rgb(229, 160, 241) 0%,
+    rgb(87, 87, 93) 35%,
+    rgb(245, 160, 224) 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  font-family: "Montserrat", sans-serif;
+  color: rgb(236, 223, 223);
+  font-weight: 500;
+  font-size: x-large;
+}
+
+#survey-form {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 70px;
+  background-color: rgba(234, 222, 246, 0.418);
+  box-shadow: 2px 2px 2px 1px rgba(235, 222, 240, 0.2);
+  display: grid;
+  gap: 30px;
+  min-width: 500px;
+  min-height: 600px;
+}
+.break {
+  display: flex;
+  flex-direction: column;
+}
+.form-control {
+  padding-left: 10px;
+  height: 40px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: large;
+}
+.check_box {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  font-size: larger;
+}
+
+.input-checkbox {
+  display: inline;
+}
+#comments {
+  min-height: 120px;
+  width: 100%;
+  padding: 20px;
+  resize: vertical;
+  box-sizing: border-box;
+  border-radius: 4px solid grey;
+  font-size: larger;
+}
+#submit {
+  height: 35px;
+  border-radius: 4px solid grey;
+  font-size: large;
+}
