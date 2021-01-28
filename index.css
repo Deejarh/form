@@ -27,7 +27,7 @@ div.container {
 }
 @media screen and (min-width: 550px){
   body{
-    width: 800px;
+    width: 100%;
     margin: auto;
   }
 }
