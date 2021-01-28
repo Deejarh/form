@@ -16,6 +16,8 @@ body {
     rgb(87, 87, 93) 35%,
     rgb(190, 180, 188) 100%
   );
+  background-repeat: no-repeat;
+  background-color: rgb(190, 180, 188);
 
   max-width: 100%;
   display: grid;
@@ -27,7 +29,8 @@ body {
 }
 @media screen and (min-width: 550px){
   body{
-    width: 800px;
+    width: 100%;
+    
     margin: auto;
   }
 }
