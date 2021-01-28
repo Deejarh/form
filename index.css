@@ -5,8 +5,7 @@ html {
 *,
 *:before,
 *:after body {
-  position: relative;
-  margin: auto;
+  position: relative
 }
 
 body {
@@ -15,10 +14,7 @@ body {
     rgb(163, 160, 163) 0%,
     rgb(87, 87, 93) 35%,
     rgb(190, 180, 188) 100%
-  );
-  background-repeat: no-repeat;
-  background-color: rgb(190, 180, 188);
-
+  ); 
   max-width: 100%;
   display: grid;
   justify-content: center;
@@ -26,13 +22,6 @@ body {
   font-family: "Montserrat", sans-serif;
   color: rgb(236, 223, 223);
   font-size: 1.2em;
-}
-@media screen and (min-width: 550px){
-  body{
-    width: 100%;
-    
-    margin: auto;
-  }
 }
 body > header {
   width: 100%;
@@ -43,7 +32,6 @@ body > header {
   border-radius: 5px;
   padding: 50px;
   background-color: rgba(234, 222, 246, 0.418);
-
   display: grid;
   gap: 20px;
   max-width: 100%;
