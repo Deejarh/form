@@ -4,73 +4,124 @@ html {
 
 *,
 *:before,
-*:after div.container {
+*:after body {
   position: relative;
+  margin: auto;
 }
 
-body {
+div.container {
   background: linear-gradient(
     60deg,
-    rgb(229, 160, 241) 0%,
+    rgb(163, 160, 163) 0%,
     rgb(87, 87, 93) 35%,
-    rgb(245, 160, 224) 100%
+    rgb(190, 180, 188) 100%
   );
 
-  display: flex;
-  flex-direction: column;
+  max-width: 100%;
+  display: grid;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-
   font-family: "Montserrat", sans-serif;
   color: rgb(236, 223, 223);
-  font-weight: 500;
-  font-size: x-large;
+  font-size: 1.2em;
 }
-
+@media screen and (min-width: 550px){
+  body{
+    width: 800px;
+    margin: auto;
+  }
+}
+body > header {
+  width: 100%;
+  color: rgb(245, 233, 233);
+  padding: 10px;
+}
 #survey-form {
-  border: 1px solid grey;
   border-radius: 5px;
-  padding: 70px;
+  padding: 50px;
   background-color: rgba(234, 222, 246, 0.418);
-  box-shadow: 2px 2px 2px 1px rgba(235, 222, 240, 0.2);
+
   display: grid;
-  gap: 30px;
-  min-width: 500px;
-  min-height: 600px;
+  gap: 20px;
+  max-width: 100%;
 }
 .break {
   display: flex;
   flex-direction: column;
 }
 .form-control {
-  padding-left: 10px;
-  height: 40px;
+  padding: 10px;
+  max-width: 100%;
   border-radius: 4px;
   margin-top: 10px;
-  font-size: large;
+  font-size: 0.8em;
 }
 .check_box {
-  display: flex;
-  column-gap: 10px;
-  align-items: center;
-  font-size: larger;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.check_box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 .input-checkbox {
-  display: inline;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+.check_box:hover input ~ .input-checkbox {
+  background-color: #ccc;
+}
+.check_box input:checked ~ .input-checkbox {
+  background-color: #2196f3;
+}
+.input-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.check_box input:checked ~ .input-checkbox:after {
+  display: block;
+}
+.check_box .input-checkbox:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 #comments {
-  min-height: 120px;
+  max-height: 150px;
   width: 100%;
   padding: 20px;
   resize: vertical;
   box-sizing: border-box;
-  border-radius: 4px solid grey;
-  font-size: larger;
+  border-radius: 5px;
+  font-size: 1em;
 }
 #submit {
   height: 35px;
-  border-radius: 4px solid grey;
-  font-size: large;
+  border-radius: 20px;
+  font-size: 1em;
+  width: 40%;
+  margin: auto;
 }

@@ -11,102 +11,107 @@
     <title>SurveyForm</title>
   </head>
   <body>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <div class="container">
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
     <header>
       <h1 id="title">Free code camp survey form</h1>
       <p id="description">
         Thank you for taking the time to help us improve the platform
       </p>
     </header>
-    <form id="survey-form" method="GET">
-      <div class="break">
-        <label id="name-label" for="name"> Name </label>
-        <input
-          class="form-control"
-          type="text"
-          id="name"
-          placeholder="Enter your name"
-          required
-        />
-      </div>
-      <div class="break">
-        <label id="email-label" for="email"> Email </label>
-        <input
-          class="form-control"
-          type="email"
-          id="email"
-          placeholder="Enter your Email"
-          required
-        />
-      </div>
-      <div class="break">
-        <label id="number-label" for="number"> Age (optional) </label>
-        <input
-          class="form-control"
-          type="number"
-          id="number"
-          min="10"
-          max="100"
-          placeholder="Age"
-        />
-      </div>
-      <div class="break">
-        <label for="dropdown">
-          which option best describe your current role
-        </label>
-        <select name="current role" id="dropdown" class="form-control">
-          <option value="">current role</option>
-          <option value="student">student</option>
-          <option value="full time job">full time job</option>
-        </select>
-      </div>
-
-      <div class="break">
-        <label for="option">
-          what is your favorite feature of free code camp?
-        </label>
-        <select name="select an option" id="option" class="form-control">
-          <option value="">select an option</option>
-          <option value="challenges">challenges</option>
-          <option value="option">option</option>
-        </select>
-      </div>
-
-      <div>
-        <p>What would you like to improve? (check all that apply)</p>
-        <label class="check_box">
+    <section class="form">
+      <form id="survey-form" method="GET">
+        <div class="break">
+          <label id="name-label" for="name"> Name </label>
           <input
-            type="checkbox"
-            name="front-end projects"
-            value="front-end projects"
-            class="input-checkbox"
+            class="form-control"
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
           />
-          front-end project
-        </label>
-
-        <label class="check_box">
+        </div>
+        <div class="break">
+          <label id="email-label" for="email"> Email </label>
           <input
-            class="input-checkbox"
-            type="checkbox"
-            name="Back-end projects"
-            value="Back-end projects"
+            class="form-control"
+            type="email"
+            id="email"
+            placeholder="Enter your Email"
+            required
           />
-          Back-end project
-        </label>
-      </div>
+        </div>
+        <div class="break">
+          <label id="number-label" for="number"> Age (optional) </label>
+          <input
+            class="form-control"
+            type="number"
+            id="number"
+            min="10"
+            max="100"
+            placeholder="Age"
+          />
+        </div>
+        <div class="break">
+          <label for="dropdown">
+            which option best describe your current role
+          </label>
+          <select name="current role" id="dropdown" class="form-control">
+            <option value="">current role</option>
+            <option value="student">student</option>
+            <option value="full time job">full time job</option>
+          </select>
+        </div>
 
-      <div class="break">
-        <p>Any comment or suggestion?</p>
-        <textarea
-          id="comments"
-          class="input-text-area"
-          name="comment"
-          placeholder="Enter your comment here..."
-        ></textarea>
-      </div>
-      <div class="break">
-        <input type="submit" id="submit" />
-      </div>
-    </form>
+        <div class="break">
+          <label for="option">
+            what is your favorite feature of free code camp?
+          </label>
+          <select name="select an option" id="option" class="form-control">
+            <option value="">select an option</option>
+            <option value="challenges">challenges</option>
+            <option value="option">option</option>
+          </select>
+        </div>
+        <div>
+          <p>What would you like to improve? (check all that apply)</p>
+          <label class="check_box"> front-end project
+          <input
+          type="checkbox"
+          checked = "checked"
+          /><span class="input-checkbox"></span>
+           
+          </label>
+          <label class="check_box"> Backend-end project  
+            <input
+            type="checkbox"
+            checked = "checked"
+            /><span class="input-checkbox"></span>
+          </label>
+          </label>
+          <label class="check_box"> Data-Anaylsis  
+            <input
+            type="checkbox"
+            checked = "checked"
+            /><span class="input-checkbox"></span>
+          </label>
+        </div>
+
+        <div class="break">
+          <p>Any comment or suggestion?</p>
+          <textarea
+            id="comments"
+            class="input-text-area"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+        <div class="break">
+          <input type="submit" id="submit" />
+        </div>
+      </form>
+    </section>
+  </div>
   </body>
 </html>
